@@ -20,7 +20,7 @@ public class IndexController {
     
     @GetMapping("/game-add")
     public String getGameAdd() {
-        return "/game/add";
+        return "/game-add";
     }
     
 

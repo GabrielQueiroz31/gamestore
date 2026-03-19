@@ -23,17 +23,17 @@ public class GameController {
 
     @GetMapping("/game-list")
     public ModelAndView gameList() {
-        ModelAndView mv = new ModelAndView("/game/list");
+        ModelAndView mv = new ModelAndView("/game-list");
         mv.addObject("games", gameRepository.findAll());
         return mv;
     }
 
     @PostMapping("game-add")
     public ModelAndView createGame(Game game) {
-        ModelAndView mv = new ModelAndView("/game/add");
+        ModelAndView mv = new ModelAndView("/game-add");
         gameRepository.save(game);
         mv.setViewName("redirect:/game-list");
-        
+
         return mv;
     }
     
